@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+html,
+body {
+  margin: 0;
+}
+.flex {
+  display: flex;
+}
+.container {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.app {
+  flex-direction: column;
+  align-items: center;
+  width: 25rem;
+  height: 40rem;
+  border: 1px solid black;
+  margin: 50px 0;
+}
+h1 {
+  height: 30px;
+  margin: 1.25rem 0 0 0;
+  padding: 0;
+  line-height: 30px;
+}
+#todo-list {
+  align-self: flex-start;
+  font-size: 25px;
+  overflow: scroll;
+  height: calc(100% - 70px);
+  width: 100%;
+  flex-direction: column;
+  padding: 0 20px;
+}
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+li > .todo-check {
+  margin-right: 10px;
+}
+li > .todo-label {
+  flex-grow: 1;
+  text-align: left;
+}
+li > .todo-del {
+  align-self: flex-end;
+  text-align: right;
+}
+#todo-form {
+  position: fixed;
+  top: 643px;
+  width: 25rem;
+  justify-content: center;
+}
+.todo-input {
+  width: 80%;
+  height: 35px;
+  outline: none;
+}
+.todo-add {
+  width: 50px;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 30px;
+  color: white;
+}
+.done {
+  text-decoration: line-through;
+  text-decoration-style: wavy;
+}
+
+@media screen and (max-width: 375px) {
+  .app {
+    width: 300px;
+  }
+  h1 {
+    font-size: 27px;
+  }
+  #todo-list {
+    font-size: 20px;
+  }
+  #todo-form {
+    width: 300px;
+  }
+}
+@media screen and (max-height: 700px) {
+  .app {
+    height: 590px;
+  }
+  #todo-form {
+    top: 600px;
+  }
+}
+@media screen and (min-height: 900px) {
+  .app {
+    height: 810px;
+  }
+  #todo-form {
+    top: 810px;
+  }
+}
